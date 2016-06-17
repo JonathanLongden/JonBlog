@@ -14,7 +14,7 @@ var app = express();
 
 require('./passport/passport.js')(passport);//self invokes passport
 
-app.use(session(config));//set session secret
+//app.use(session(config));//set session secret
 app.use(passport.initialize());//initialize passport
 app.use(passport.session());//configure session through passport. Starts session on login
 // app.use(cors()); for mlab
@@ -75,10 +75,12 @@ if (process.env.NODE_ENV === 'production') {
 
 
 mongoose.connect(
-  // "mongodb://localhost:27017/Blog"
-    config.mongo_uri // for mongolab
+  "mongodb://localhost:27017/Blog",
+    config.mongo_uri 
 
-  );
+);
+// for mongolab
+
 mongoose.connection.once('open', function(){
 	console.log("Connected to your database.");
 });
