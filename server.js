@@ -5,14 +5,16 @@ var mongoose = require('mongoose');
 var passport = require('passport');//local auth
 var session = require('express-session');//session
 
+
 var userControl = require('./controllers/userControl.js');
 var postControl = require('./controllers/postControl.js');
+var config = require('./config.js');
 
 var app = express();
 
 require('./passport/passport.js')(passport);//self invokes passport
 
-// app.use(session(config));//set session secret
+app.use(session(config));//set session secret
 app.use(passport.initialize());//initialize passport
 app.use(passport.session());//configure session through passport. Starts session on login
 // app.use(cors()); for mlab
@@ -86,6 +88,8 @@ mongoose.connection.once('open', function(){
 app.get('/', function(req, res){
 	res.render('index');
 });
+
+
 
 
 
