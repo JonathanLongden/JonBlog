@@ -11,7 +11,6 @@ var hashHistory = ReactRouter.hashHistory;
 
 
 
-
 // var Home = require('./../home.js');
 // var Character = require('./../character.js');
 // var Login = require('./../loginApp.js');
@@ -39,3 +38,4 @@ ReactDOM.render(
 
 //<IndexRoute component={Home}/>	//loads Home upon going to site and goes between <Route path/> and </Route>
 //<Route path='/login' component={Login} />
+

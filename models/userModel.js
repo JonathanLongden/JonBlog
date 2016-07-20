@@ -2,7 +2,6 @@ var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs'); //encrypts the password
 
 
-
 var UserSchema = new mongoose.Schema({
 
     userName: {type: String, required: true, unique: true},
@@ -27,4 +26,5 @@ UserSchema.methods.validPassword = function(password) {
 
 
 module.exports = mongoose.model('User', UserSchema);
+
 
