@@ -11,11 +11,12 @@ var hashHistory = ReactRouter.hashHistory;
 
 
 
-// var Home = require('./../home.js');
+
 // var Character = require('./../character.js');
 // var Login = require('./../loginApp.js');
 
 var Main = require('./../main.js');
+var Home = require('./../home.js');
 var Contact = require('./../contact/contact.js');
 var Inspiration = require('./../inspiration/inspiration.js');
 var Resume = require('./../resume/resume.js');
@@ -30,12 +31,12 @@ ReactDOM.render(
 			<Route path='/inspiration' component={Inspiration} />
 			<Route path='/contact' component={Contact} />
 			<Route path='/resume' component={Resume} />
-		
+			<IndexRoute component={Home}/>	
 		</Route>
 	</Router>, 
 	document.getElementById('app')
 );
 
-//<IndexRoute component={Home}/>	//loads Home upon going to site and goes between <Route path/> and </Route>
+
 //<Route path='/login' component={Login} />
 
