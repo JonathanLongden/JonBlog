@@ -1,0 +1,78 @@
+body {
+
+    min-height: 100vh;
+    min-width: 100vw;
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(-90deg, red, yellow); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(-90deg, red, yellow); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(-90deg, yellow); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(-90deg, red, yellow); /* Standard syntax */  
+  }
+
+#app {
+    width: 100vw;
+    height: 100vh; 
+}
+.box{
+  width: 100vw;
+  height: 100vh;
+  border-style: solid;
+  border-width: 5px;
+}
+
+.leftu{
+  background-color: black; 
+  width: 50%;
+  height: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: white white red yellow;
+}
+.rightu{
+  background-color: white; 
+  width: 50%;
+  height: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: red red yellow black;
+}
+
+.leftd{
+  background-color: red;
+  width: 50%;
+  height: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black white black yellow;
+}
+.rightd{
+  background-color: yellow;
+  width: 50%;
+  height: 50%;
+  border-style: solid;
+  border-width: 5px;
+  border-color: black red black black;
+}
+
+@font-face {
+font-family: 'Material Icons';
+font-style: normal;
+font-weight: 400;
+src: local('Material Icons'), local('MaterialIcons-Regular'), url(http://fonts.gstatic.com/s/materialicons/v7/2fcrYFNaTjcS6g4U3t-Y5ZjZjT5FdEJ140U2DJYC3mY.woff2) format('woff2');
+}
+
+.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;
+line-height: 1;
+letter-spacing: normal;
+text-transform: none;
+display: inline-block;
+word-wrap: normal;
+-webkit-font-feature-settings: 'liga';
+-webkit-font-smoothing: antialiased;
+}
+
+
