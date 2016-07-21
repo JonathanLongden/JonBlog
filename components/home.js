@@ -11,29 +11,29 @@ var Home = React.createClass({
 						<div className="col 6 leftu">
 							<Link to='/blog'> 
 								<a className="yellow-text waves-effect waves-light btn">
-								<i className="material-icons right">Blog
-								</i></a>
+								Blog
+								</a>
 							</Link>
 						</div>
 						<div className="col 6 rightu">
 							<Link to='/resume'>
 								<a className="red-text waves-effect waves-light btn">
-								<i className="material-icons right">Resume
-								</i></a>
+								Resume
+								</a>
 							</Link>
 						</div>
 						<div className="col 6 leftd">
 							<Link to='/inspiration'>
-								<a className="white-text waves-effect waves-light btn"><i className="material-icons right">
+								<a className="white-text waves-effect waves-light btn">
 								Inspiration
-								</i></a>
+								</a>
 							</Link>
 						</div>
 						<div className="col 6 rightd">
 							<Link to='/contact'>
-									<a className="black-text waves-effect waves-light btn">
-									<i className="material-icons right">Contact
-									</i></a>
+								<a className="black-text waves-effect waves-light btn">
+								Contact
+								</a>
 							</Link>
 						</div>	
 					</div>

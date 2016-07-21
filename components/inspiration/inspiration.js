@@ -5,9 +5,16 @@ var AutoBio = React.createClass({
 		return (
 
 			<div>
-
-				<button>Javascript Games </button>
-				<button> Animations </button>
+				<div className="row">
+					<div className="col s6">
+						<button>Javascript Games </button>
+					</div>
+					<div className="col s6">
+						<button> Animations </button>
+					</div>
+				</div>
+				
+				
 			</div>
 			)
 	}

@@ -1,6 +1,9 @@
 var React = require('react');
 var Link = require('react-router').Link;
 var ProfilePic = require('./profilePic.js');
+var GitHub = require('./github.js');
+var LinklinPort = require('./linklinPort.js');
+
 
 
 var Main = React.createClass({
@@ -29,19 +32,19 @@ var Main = React.createClass({
 			return(
 		<div>
 			<div className="row">
-				<div className="col s3">
-					<ProfilePic/>
+					<div className="col s4">	
+						<ProfilePic/>
+						<GitHub />
+						<LinklinPort />
+					</div>
+					<div className="col s8">
+						<h1> Welcome "Anonymous User" to: </h1>
+						<h2> Jon Longden's Blog </h2>
+							
+					</div>
 				</div>
-				<div className="col s9">
-
-					<h1> Hello { props.user.user.username } </h1>
-
-					<h2>Better Design by Nature</h2>	
-				
-			</div>
-			</div>
-					<div className="divider">
-			</div>			
+				<div className="divider">
+				</div>		
 		
 		{this.props.children}	
 		</div>				
@@ -49,20 +52,21 @@ var Main = React.createClass({
 
 	} else {
 
-
 		return (
 			<div>
 				<div className="row">
-					<div className="col s3">
+					<div className="col s4">	
 						<ProfilePic/>
+						<GitHub />
+						<LinklinPort />
 					</div>
-					<div className="col s9">
-						<h1> Welcome "Anonymous User" </h1>
-						<h2>Better Design by Nature</h2>	
-					
+					<div className="col s8">
+						<h1> Welcome "Anonymous User" to: </h1>
+						<h2> Jon Longden's Blog </h2>
+							
+					</div>
 				</div>
-				</div>
-						<div className="divider">
+				<div className="divider">
 				</div>			
 			
 			{this.props.children}	
@@ -72,6 +76,10 @@ var Main = React.createClass({
 	}
 });
 module.exports = Main;
+
+//<div className="waves-effect waves-light btn" href="https://github.com/JonathanLongden?tab=repositories">GitHub</div>
+//<div className="waves-effect waves-light btn" href="https://www.linkedin.com/in/jonathan-longden-9b94056b">linkedin</div>
+					
 
 
 							// <Link to = '/signout'>
@@ -85,39 +93,4 @@ module.exports = Main;
 
 
 
-// } else {
 
-// 			return(
-// 				<div>
-// 				<div> 
-// 					<div className="buttonBox">
-// 						<Link to='/'> 
-// 							<button className="btn btn-success">Home</button>
-// 						</Link>
-// 						<Link to='/character'>
-// 							<button className="btn btn-success">Character</button>
-// 						</Link>
-// 						<Link to='/inspiration'>
-// 							<button className="btn btn-success">Inspiration</button>
-// 						</Link>
-// 						<Link to='/contact'>
-// 							<button className="btn btn-success">Contact</button>
-// 						</Link>
-// 						<Link to='/login'>
-// 							<button className="btn btn-success">Login</button>
-// 						</Link>
-// 					</div>
-// 						{this.props.children}
-// 				</div>
-// 				<footer className = 'page-footer grey' >
-// 					<div className = 'footer-copyright'>
-// 						<div className = 'container '>
-// 							<p className = 'white-text'>By Jonathan E. Longden</p>
-// 						</div>
-// 					</div>
-
-// 				</footer>	
-// 				</div>	
-
-// 					)
-// 				}

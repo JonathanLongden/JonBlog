@@ -14,6 +14,23 @@ body {
     width: 100vw;
     height: 100vh; 
 }
+.bottompic{
+  display: inline-flex;
+}
+.rightpic{
+    display: inline-table;
+    width: 49%;
+    justify-content: center;
+    align-content: center;
+    padding-left: 50px;
+}
+.leftpic{
+    display: inline-table;
+    width: 49%;
+    justify-content: center;
+    align-content: center;
+    padding-left: 50px;
+}
 .box{
   width: 100vw;
   height: 100vh;

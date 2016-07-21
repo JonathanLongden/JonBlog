@@ -5,8 +5,12 @@ var Blog = React.createClass({
 		return (
 
 			<div>
-
-				This is for our Blog!
+				<div className="login">
+				 <a className="btn">Click to Create a Account or Log in!</a>
+				</div>
+				<div className="Postblog">
+				<h1> Please Leave  a Message </h1>
+				</div>
 			</div>
 			)
 	}

@@ -4,9 +4,9 @@ var EducationPic = require('./educationPic.js');
 
 var Resume = React.createClass({
 	componentDidMount() {
-  var element = ReactDOM.findDOMNode(this.refs.dropdown) //for materialize to work
+	  var element = ReactDOM.findDOMNode(this.refs.dropdown) //for materialize to work
 
-  $(element).ready(function() {
+	  $(element).ready(function() {
   	$('.modal-trigger').leanModal({
   	dismissible: true, // Modal can be dismissed by clicking outside of the modal
   	opacity: .5, // Opacity of modal background
@@ -26,22 +26,7 @@ var Resume = React.createClass({
 
 		<h1>Resume</h1>
 			
-  	<div className="modal-trigger waves-effect waves-light btn" href="#modal1">Contact Information</div>
-  	<div id="modal1" className="modal modal-fixed-footer">
-    <div className="modal-content">
-      	<div className="col s6">
-			<div className="card-panel green">
-     			<span className="white-text ">
-     			<p>Jonathan Longden</p> 
-				<p>400 N Kennedy</p>
-				<p>Belgrade, MT 59714</p>
-				<p>Cell Phone: (605) 300-0046</p>
-				<p>longden.jonathanedgar@gmail.com</p>
-     			</span>
-     		</div>
-	   	</div>   	
-    </div>
- 	</div>
+  	
   <div className="divider"></div>
  	<div className="modal-trigger waves-effect waves-light btn" href="#modal2">Education</div>
  	<div id="modal2" className="modal modal-fixed-footer">

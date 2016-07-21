@@ -1,5 +1,5 @@
 var express = require('express');
-var cors = require('cors'); // before you push up to Heroku for mlab
+//var cors = require('cors'); // before you push up to Heroku for mlab
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var passport = require('passport');//local auth
@@ -18,7 +18,7 @@ require('./passport/passport.js')(passport);//self invokes passport
 app.use(session(configSession));//set session secret
 app.use(passport.initialize());//initialize passport
 app.use(passport.session());//configure session through passport. Starts session on login
-app.use(cors()); // before you push up to Heroku for mlab
+//app.use(cors()); // before you push up to Heroku for mlab
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(__dirname + '/views'));
@@ -82,7 +82,7 @@ if (process.env.NODE_ENV === 'production') {
 
 
 mongoose.connect(
-    "mongodb://localhost:27017/Blog",
+    //"mongodb://localhost:27017/Blog",
     config.mongo_uri 
 
 );
