@@ -1,12 +1,13 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
 var EducationPic = require('./educationPic.js');
+var Link = require('react-router').Link;
 
 var Resume = React.createClass({
 	componentDidMount() {
 	  var element = ReactDOM.findDOMNode(this.refs.dropdown) //for materialize to work
 
-	  $(element).ready(function() {
+	$(element).ready(function() {
   	$('.modal-trigger').leanModal({
   	dismissible: true, // Modal can be dismissed by clicking outside of the modal
   	opacity: .5, // Opacity of modal background
@@ -23,12 +24,24 @@ var Resume = React.createClass({
 	render: function(){
 		return (
 			<div>
+			<div className="backbutton">
+         	<Link to='/' className="white-text waves-effect waves-white btn">         
+            Home
+          	</Link>
+      		</div>
+
 
 		<h1>Resume</h1>
+
 			
   	
-  <div className="divider"></div>
- 	<div className="modal-trigger waves-effect waves-light btn" href="#modal2">Education</div>
+  	
+
+
+	<a className="modal-trigger" href="#modal2">
+    	<img height="80px" width="80px" src='./image/education.png'/>
+    	<p>Education</p>
+    </a>
  	<div id="modal2" className="modal modal-fixed-footer">
     <div className="modal-content">
 			<div className="card-panel green">
@@ -97,76 +110,104 @@ var Resume = React.createClass({
      		</div>  	  	
     </div>
  	</div>
- 	<div className="divider"></div>
- 	<div className="modal-trigger waves-effect waves-light btn" href="#modal3">Professional Experience</div>
+ 	
+
+
+ 	<a className="modal-trigger" href="#modal3">
+    	<img height="80px" width="80px" src='./image/work.png'/>
+    	<p>Professional Experience</p>
+    </a>
   	<div id="modal3" className="modal modal-fixed-footer">
     <div className="modal-content">
       	<div className="col s6">
 			<div className="card-panel green">
      			<span className="white-text ">
-     			Fort Peck Community College Math Instructor		Poplar, MT	       2013-2014-Aug
+     			<p>Fort Peck Community College Math Instructor</p>
+     			<p>Poplar, MT</p>
+     			<p>2013-2014-Aug</p>
 
-				Poplar Middle School Science Teacher			Poplar, MT		2014-Spring
+				<p>Poplar Middle School Science Teacher</p>
+				<p>Poplar, MT</p>
+				<p>2014-Spring</p>	
 
-				Brockton High School Science Teacher			Brockton, MT		2011- 2013
+				<p>Brockton High School Science Teacher</p>
+				<p>Brockton, MT</p>
+				<p>2011- 2013</p>	
 
-				Brockton High School Math Teacher				Brockton, MT		2010 - 2011
+				<p>Brockton High School Math Teacher</p>
+				<p>Brockton, MT</p>
+				<p>2010 - 2011</p>	
 
-				Fort Peck Community College Science Teacher		Poplar, MT		2010-Summer
+				<p>Fort Peck Community College Science Teacher</p>
+				<p>Poplar, MT</p>
+				<p>2010-Summer</p>	
 
-				Broadus High School Student Teaching			Broadus, MT		2009-Fall
+				<p>Broadus High School Student Teaching</p>	
+				<p>Broadus, MT</p>
+				<p>2009-Fall</p>	
 				 
-				Havre Middle School Practicum Spring			Havre, MT		2009
+				<p>Havre Middle School Practicum Spring</p>
+				<p>Havre, MT</p>
+				<p>2009</p>	
 				 
-				Havre High School Practicum Fall 				Havre, MT		2008
+				<p>Havre High School Practicum Fall</p>
+				<p>Havre, MT</p>
+				<p>2008</p>	
 				 
-				Havre High School Practicum Spring 			Havre, MT		2008
+				<p>Havre High School Practicum Spring </p>
+				<p>Havre, MT</p>
+				<p>2008</p>	
 				 
-				Poplar Middle Schools Substituted 				Poplar, MT		2006– 2008
+				<p>Poplar Middle Schools Substituted</p>
+				<p>Poplar, MT</p>
+				<p>2006– 2008</p>	
      			</span>
      		</div>
 	   	</div>   	
     </div>
  	</div>
- 	<div className="divider"></div>
- 	<div className="modal-trigger waves-effect waves-light btn" href="#modal4">Work Experience</div>
+ 	
+
+ 	<a className="modal-trigger" href="#modal4">
+    	<img height="80px" width="80px" src='./image/work2.png'/>
+    	<p>Work Experience</p>
+    </a>
   	<div id="modal4" className="modal modal-fixed-footer">
     <div className="modal-content">
       	<div className="col s6">
-			<div className="card-panel green">
+			<div className="card-panel green z-depth-5">
      			<span className="white-text ">
-     			Gallatin Rest Home						Bozeman, MT 	2015-2016
+     			<pre className="flow-text">Gallatin Rest Home		Bozeman, MT				2015-2016</pre>
 				 
-				Bridger Health Care						Bozeman, MT		2014
+				<pre className="flow-text">Bridger Health Care 	Bozeman, MT 	2014</pre>
 
-				Prairie Travelers						Glasgow, MT		2013-2014
+				<pre className="flow-text">Prairie Travelers 		Glasgow, MT 	2013-2014</pre>
 
-				Montana State University-Northern Resident Hall Advisor 	Havre, MT		2007-2009
+				<pre className="flow-text">MSU-Northern Resident Hall Advisor 	Havre, MT 2007-2009</pre>
 					
-				Montana State University-Northern Dish Washer  		Havre, MT		2007-2009
+				<pre className="flow-text">MSU-Northern Dish Washer 	Havre, MT 	2007-2009</pre>
 				 
-				Montana State University-Northern Desk Security Guard 	Havre, MT		2006-2009
-				 
-				Certified Nursing Assistant 					Traveler		2002-2014
+				<pre className="flow-text">MSU-Northern Desk Security Guard	Havre, MT	2006-2009</pre>
      			</span>
      		</div>
 	   	</div>   	
     </div>
  	</div>
-	<div className="divider"></div>		
+			
 
 
- 	<div className="modal-trigger waves-effect waves-light btn" href="#modal5">Professional Organization</div>
+	<a className="modal-trigger" href="#modal5">
+    	<img height="80px" width="80px" src='./image/org.png'/>
+    	<p>Professional Organization</p>
+    </a>
   	<div id="modal5" className="modal modal-fixed-footer">
     <div className="modal-content">
       	<div className="col s6">
 			<div className="card-panel green">
      			<span className="white-text ">
-     			Montana Education Association
-				 
-				First Aid
-				 
-				CPR
+     			<p>Montana Education Association</p> 
+				<p>First Aid</p>
+				<p>CPR</p>
      			</span>
      		</div>
 	   	</div>   	

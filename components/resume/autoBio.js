@@ -5,7 +5,6 @@ var AutoBio = React.createClass({
 		return (
 
 			<div>
-
 				Hi
 			</div>
 			)

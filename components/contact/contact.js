@@ -1,5 +1,6 @@
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Link = require('react-router').Link;
 
 var AutoBio = React.createClass({
 	componentDidMount() {
@@ -23,7 +24,19 @@ var AutoBio = React.createClass({
 		return (
 
 			<div>
-				<div className="modal-trigger waves-effect waves-light btn" href="#modal1">Contact Information</div>
+
+      <div className="backbutton">
+          <Link to='/' className="white-text waves-effect waves-white btn">
+            Home 
+          </Link>
+      </div>
+
+      <a className="modal-trigger" href="#modal1">
+      <img height="80px" width="80px" src='./image/ContactBook.png'/>
+      <p>Contact Information</p>
+      </a>
+
+				
   	<div id="modal1" className="modal modal-fixed-footer">
     <div className="modal-content">
       	<div className="col s6">
